@@ -20,7 +20,7 @@ class Solution:
         '''  # 超时
         nums = sorted(nums)
         left = 0
-        ringt = len(nums) - 1
+        right = len(nums) - 1
 
         while left <= right:
             if nums[left] + nums[right] > target:
@@ -30,3 +30,20 @@ class Solution:
             else:
                 return left, right
         return False
+		
+		
+# 修改为以下代码
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        dict_temp = {}
+        for i in range(len(nums)):
+            x = nums[i]
+            if target - x in dict_temp:
+                return [dict_temp[target - x], i]
+            dict_temp[x] = i
+        return [-1, -1]
