@@ -35,14 +35,13 @@ class Solution:
 			
 
 # 修改为以下代码
-
 class Solution(object):
     def myAtoi(self, str):
         """
         :type str: str
         :rtype: int
         """
-        str = str.strip()  # 删除末尾空格
+        str = str.strip()  # 删除首尾空格
         if str == "":
             return 0
         number = 0
@@ -64,6 +63,3 @@ class Solution(object):
         if number > 2 ** 31 - 1:
             return 2 ** 31 - 1
         return number
-    
-
-
