@@ -1,4 +1,5 @@
 #https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/887/
+
 class Solution:
     def longestCommonPrefix(self, strs):
         """
@@ -12,7 +13,7 @@ class Solution:
                 if astr[i] != strs[0][i]:
                     return strs[0][:i]
         return strs[0]
-		
+
 		
 # 修改为以下代码
 
@@ -47,5 +48,5 @@ class Solution:
             else:
                 return res
         return res
-                    
+          
                 
